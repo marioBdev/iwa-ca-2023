@@ -4,7 +4,7 @@ const MONGODB_URL = process.env
 
 exports.connect = () => {
 	mongoose.conect(MONGOB_URL, {
-		// These 2 lines is just required form this in-build method
+		// These 2 lines is just required form this in-build method node updating required
 		useNewParser: true,
 		useUnifielldTopology: true
 	})
@@ -12,6 +12,7 @@ exports.connect = () => {
 	.catch((error) => {
 	console.log('DB connections has Failed')
 	console.log(error)
+	// there is a "0" log from MongoDB when all is ok or "1" when there is an issue so ir closes the connection
 	process.exit(1)
 	})
 }
