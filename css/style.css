@@ -1,0 +1,4 @@
+.divbyside{
+    display:flex!important;
+    column-gap: 20px!important;
+}
