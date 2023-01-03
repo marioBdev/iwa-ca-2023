@@ -37,6 +37,7 @@ router.delete('/:id', async (req, res) => {
 // Save a Job
 function saveArticleAndRedirect(path) {
   return async (req, res) => {
+    
     let article = req.article
     article.company = req.body.company
     article.logocompany = req.body.logocompany
@@ -44,11 +45,14 @@ function saveArticleAndRedirect(path) {
     article.jobtype = req.body.jobtype  
     article.workplace = req.body.workplace
     article.markdown = req.body.markdown
+    console.log(article)
     try {
       article = await article.save()
       res.redirect(`/articles/${article.slug}`)
       console.log("Saved in The Data-Base")
     } catch (e) {
+      console.log("Not Saved")
+      
       res.render(`articles/${path}`, { article: article })
     }
   }

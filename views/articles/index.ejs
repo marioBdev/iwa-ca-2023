@@ -8,15 +8,16 @@
   <title>Blog</title>
 </head>
 <body>
+  <img src="Job-list-header.jpeg" alt="Joblinked">
   <div class="container">
-    <h1 class="mb-4">Blog Articles</h1>
-    <a href="/articles/new" class="btn btn-success">New Article</a>
-
+    <h1 class="mb-4">Joblinked Opportunities</h1>
+    <a href="/articles/new" class="btn btn-success">New Jobs</a>
+   <!-- Displaying all the Job Cards -->
     <% articles.forEach(article => { %>
       <div class="card mt-4">
         <div class="card-body">
-          <h4 class="card-title"><%= article.title %></h4>
           <div class="card-subtitle text-muted mb-2">
+            <h4 class="card-title"><%= article.title %></h4>
             <%= article.createdAt.toLocaleDateString() %>
           </div>
           <div class="card-text mb-2"><%= article.description %></div>

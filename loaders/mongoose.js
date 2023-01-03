@@ -1,12 +1,13 @@
 const mongoose = require('mongoose')
 require('dotenv').config()
 const  MONGODB_key = process.env.MONGODB_URL
-console.log(MONGODB_key)
 
 exports.connect = () => {
 	mongoose.connect(MONGODB_key, {
 		// This line is just required form this in-build method Node updating required
-		useNewUrlParser: true
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		useCreateIndex: true
 	})
 	.then(console.log('DB connected succssessfully'))
 	.catch((error) => {
