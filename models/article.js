@@ -60,4 +60,3 @@ articleSchema.pre('validate', function(next) {
 })
 
 module.exports = mongoose.model('article', articleSchema)
-console.log(articleSchema)

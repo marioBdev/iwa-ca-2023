@@ -1,8 +1,8 @@
 require('dotenv').config()
 const mongoose = require('mongoose')
 
-// const MONGODB_key = process.env.MONGODB_URL
-const MONGODB_key = "mongodb://Mario2019451:CcT2019451@main-shard-00-00-03xkr.mongodb.net:27017,main-shard-00-01-03xkr.mongodb.net:27017,main-shard-00-02-03xkr.mongodb.net:27017/main?ssl=true&replicaSet=Main-shard-0&authSource=admin&retryWrites=true"
+const MONGODB_key = process.env.MONGODB_URL
+// const MONGODB_key = "mongodb://Mario2019451:CcT2019451@main-shard-00-00-03xkr.mongodb.net:27017,main-shard-00-01-03xkr.mongodb.net:27017,main-shard-00-02-03xkr.mongodb.net:27017/main?ssl=true&replicaSet=Main-shard-0&authSource=admin&retryWrites=true"
 
 exports.connect = () => {
 	mongoose.connect(MONGODB_key, {
