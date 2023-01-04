@@ -44,13 +44,13 @@ const articleSchema = new mongoose.Schema({
     required: true
   }
 })
-// Validation to add ech slug into a MongoDB
+// Validation to add ech slug into a MongoDB and redirect using unique ID "slug"
 articleSchema.pre('validate', function(next) {
   if (this.title) {
     this.slug = slugify(this.title, { lower: true, strict: false })
     console.log("Title------------> "+this.slug)
   }
-  
+  // Validation to add ech slug into a MongoDB
   if (this.markdown) {
     this.sanitizedHtml = dompurify.sanitize(marked(this.markdown))
     console.log("Sanitized------------> "+sanitizedHtml)

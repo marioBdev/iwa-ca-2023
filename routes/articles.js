@@ -45,7 +45,7 @@ function saveArticleAndRedirect(path) {
     article.jobtype = req.body.jobtype  
     article.workplace = req.body.workplace
     article.markdown = req.body.markdown
-    console.log(article)
+    // console.log(article)
     try {
       article = await article.save()
       res.redirect(`/articles/${article.slug}`)

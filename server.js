@@ -7,6 +7,7 @@ const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
 const path = require('path')
 
+const  MONGODB_key = process.env.MONGODB_URL
 const app = express()
 
 // EJS -- Embedded JavaScript
