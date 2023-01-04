@@ -3,6 +3,8 @@ const mongoose = require('mongoose')
 
 const MONGODB_key = process.env.MONGODB_URL
 
+
+
 exports.connect = () => {
 	mongoose.connect(MONGODB_key, {
 	// This line is just required form this in-build method Node updating required
@@ -10,7 +12,7 @@ exports.connect = () => {
 		useUnifiedTopology: true,
 		useCreateIndex: true
 	})
-	.then(console.log('DB connected succssessfully'))
+	.then(console.log('DB connected succssessfully'),console.log("Keroku Working!"))
 	.catch((error) => {
 	console.log('DB connections has Failed')
 	console.log(error)
