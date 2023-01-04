@@ -8,6 +8,7 @@ const methodOverride = require('method-override')
 const path = require('path')
 
 const  MONGODB_key = process.env.MONGODB_URL
+const  port  = process.env.PORT || 5000
 const app = express()
 
 // EJS -- Embedded JavaScript
@@ -26,4 +27,6 @@ app.get('/', async (req, res) => {
 app.use('/articles', articleRouter)
 
 // Running Express Server Port
-app.listen(5000)
+app.listen(port, () => {
+  console.log(`Starting Server at ${port}`)
+})
