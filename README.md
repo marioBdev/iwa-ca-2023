@@ -88,7 +88,7 @@ As a rule of thumb – slugs are created and used especially for when making opt
 <h2 style="color:#a903fc">Outcomes of project with references</h2>
 The outcomes of the project were as follows:
 
-•	A working API ( <span style="color:yellow;font-weight:bold">There is some DB Conflicts to be fixed</span> )
+•	A working API ( <span style="color:blue">There is some DB Conflicts to be fixed</span> )
 •	A clear understanding of where issues lay and ability to trouble shoot
 •	Understanding of how to set up a web server
 •	How to set up the source code versioning
